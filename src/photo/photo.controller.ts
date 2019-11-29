@@ -8,7 +8,11 @@ export class PhotoController {
 
     @Get()
     showAllPhotos(){
-        return this.photoService.showAll();
+        console.log("form controller start point");
+        const getAll = this.photoService.showAll();
+        console.log("form controller = ", getAll);
+        console.log("form controller end point");
+        return getAll;
     }
 
     @Post()
